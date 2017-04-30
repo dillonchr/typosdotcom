@@ -22,11 +22,15 @@ abbr {
 a {
   text-decoration: none;
   border-bottom: solid currentColor 1px; }
+  a:link, a:visited {
+    color: deeppink; }
+  a:hover {
+    color: #940050; }
 
 .header {
   background: deeppink;
   color: white;
-  padding: 10em 1em 1em;
+  padding: 9em 1em 1em;
   text-align: right; }
   .header__logo {
     width: 100%; }
@@ -54,18 +58,39 @@ a {
   margin: 50px auto; }
   @media (min-width: 768px) {
     .detail {
-      width: 600px; } }
+      width: 700px; } }
   .detail__header {
-    font-family: sans-serif; }
+    color: deeppink;
+    font-family: sans-serif;
+    font-size: 2em; }
   .detail__subheader {
+    color: deeppink;
+    border-bottom: solid 1px deeppink;
     font-family: sans-serif; }
   .detail__body {
     font-family: Georgia, serif;
     line-height: 1.4; }
   .detail__body:first-of-type {
     margin-top: 0; }
-  .detail__link {
-    color: #14cd14;
-    font-weight: bold; }
   .detail__list-item {
     margin-bottom: 2em; }
+
+.submit-button {
+  text-align: center; }
+  .submit-button__link {
+    background: white;
+    border: solid 0.1em deeppink;
+    border-radius: 5px;
+    color: deeppink;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    padding: 1em 0.5em; }
+    .submit-button__link:hover {
+      background: deeppink;
+      color: white;
+      border-color: white; }
+    .submit-button__link:active {
+      background: #940050;
+      color: white;
+      border-color: white; }

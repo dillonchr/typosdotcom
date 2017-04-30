@@ -4,6 +4,8 @@
   }
 }
 
+$main-color: deeppink;
+
 body {
   box-sizing: border-box;
   font-variant-numeric: oldstyle-nums;
@@ -32,8 +34,18 @@ abbr {
 a {
   text-decoration: none;
   border-bottom: solid currentColor 1px;
+
+  &:link,
+  &:visited {
+    color: deeppink;
+  }
+
+  &:hover {
+    color: darken(deeppink, 25%);
+  }
 }
 
 @import "header";
 @import "footer";
 @import "detail";
+@import "cta";

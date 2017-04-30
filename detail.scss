@@ -2,14 +2,18 @@
   margin: 50px auto;
 
   @include tablet-and-up() {
-    width: 600px;
+    width: 700px;
   }
 
   &__header {
+    color: deeppink;
     font-family: sans-serif;
+    font-size: 2em;
   }
 
   &__subheader {
+    color: deeppink;
+    border-bottom: solid 1px deeppink;
     font-family: sans-serif;
   }
 
@@ -20,11 +24,6 @@
 
   &__body:first-of-type {
     margin-top: 0;
-  }
-
-  &__link {
-    color: #14cd14;
-    font-weight: bold;
   }
 
   &__list-item {
