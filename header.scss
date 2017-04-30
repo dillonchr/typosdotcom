@@ -1,0 +1,26 @@
+.header {
+  background: deeppink;
+  color: white;
+  padding: 10em 1em 1em;
+  text-align: right;
+
+  &__logo {
+    width: 100%;
+
+    @include tablet-and-up() {
+      width: 500px;
+    }
+  }
+
+  &__logo-text {
+    font-family: sans-serif;
+    font-size: 6em;
+    margin: 0;
+  }
+
+  &__subheading {
+    font-family: Georgia, serif;
+    font-weight: 300;
+    margin: 0;
+  }
+}

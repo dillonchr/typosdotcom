@@ -1,0 +1,39 @@
+@mixin tablet-and-up() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+  font-size: 15px;
+  margin: 0;
+  padding: 1em;
+  width: 100%;
+
+  @include tablet-and-up() {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+
+abbr {
+  font-variant-caps: small-caps;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
+}
+
+
+a {
+  text-decoration: none;
+  border-bottom: solid currentColor 1px;
+}
+
+@import "header";
+@import "footer";
+@import "detail";

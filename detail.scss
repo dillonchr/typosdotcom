@@ -1,0 +1,33 @@
+.detail {
+  margin: 50px auto;
+
+  @include tablet-and-up() {
+    width: 600px;
+  }
+
+  &__header {
+    font-family: sans-serif;
+  }
+
+  &__subheader {
+    font-family: sans-serif;
+  }
+
+  &__body {
+    font-family: Georgia, serif;
+    line-height: 1.4;
+  }
+
+  &__body:first-of-type {
+    margin-top: 0;
+  }
+
+  &__link {
+    color: #14cd14;
+    font-weight: bold;
+  }
+
+  &__list-item {
+    margin-bottom: 2em;
+  }
+}
