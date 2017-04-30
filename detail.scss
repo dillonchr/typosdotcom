@@ -1,7 +1,8 @@
 .detail {
-  margin: 50px auto;
+  margin: 50px 1em;
 
   @include tablet-and-up() {
+    margin: 50px auto;
     width: 700px;
   }
 
@@ -26,7 +27,18 @@
     margin-top: 0;
   }
 
+  &__list {
+    padding-left: 0;
+  }
+
   &__list-item {
-    margin-bottom: 2em;
+    list-style: none;
+    margin-bottom: 1em;
+
+    &::before {
+      content: "☞";
+      display: inline-block;
+      padding: 0 1em;
+    }
   }
 }

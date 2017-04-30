@@ -1,17 +1,16 @@
+@charset "UTF-8";
 body {
   box-sizing: border-box;
   font-variant-numeric: oldstyle-nums;
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
   font-feature-settings: "onum";
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
-  padding: 1em;
   width: 100%; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     body {
-      font-size: 18px;
-      padding: 0; } }
+      font-size: 18px; } }
 
 abbr {
   font-variant-caps: small-caps;
@@ -30,11 +29,17 @@ a {
 .header {
   background: deeppink;
   color: white;
-  padding: 9em 1em 1em;
-  text-align: right; }
+  padding: 7em 1em 1em;
+  text-align: center; }
+  @media (min-width: 769px) {
+    .header {
+      padding-top: 9em;
+      text-align: right; } }
   .header__logo {
-    width: 100%; }
-    @media (min-width: 768px) {
+    fill: currentColor;
+    fill-rule: evenodd;
+    width: 75%; }
+    @media (min-width: 769px) {
       .header__logo {
         width: 500px; } }
   .header__logo-text {
@@ -43,21 +48,28 @@ a {
     margin: 0; }
   .header__subheading {
     font-family: Georgia, serif;
+    font-size: 1em;
     font-weight: 300;
     margin: 0; }
+    @media (min-width: 769px) {
+      .header__subheading {
+        font-size: 2em; } }
 
 .footer {
+  color: #999999;
   font-variant-caps: small-caps;
   -moz-font-feature-settings: "smcp";
   -webkit-font-feature-settings: "smcp";
   font-feature-settings: "smcp";
   font-size: 0.667em;
+  padding: 2em;
   text-align: center; }
 
 .detail {
-  margin: 50px auto; }
-  @media (min-width: 768px) {
+  margin: 50px 1em; }
+  @media (min-width: 769px) {
     .detail {
+      margin: 50px auto;
       width: 700px; } }
   .detail__header {
     color: deeppink;
@@ -72,8 +84,15 @@ a {
     line-height: 1.4; }
   .detail__body:first-of-type {
     margin-top: 0; }
+  .detail__list {
+    padding-left: 0; }
   .detail__list-item {
-    margin-bottom: 2em; }
+    list-style: none;
+    margin-bottom: 1em; }
+    .detail__list-item::before {
+      content: "☞";
+      display: inline-block;
+      padding: 0 1em; }
 
 .submit-button {
   text-align: center; }

@@ -1,11 +1,18 @@
 .header {
-  background: $main-color;
+  background: deeppink;
   color: white;
-  padding: 9em 1em 1em;
-  text-align: right;
+  padding: 7em 1em 1em;
+  text-align: center;
+
+  @include tablet-and-up() {
+    padding-top: 9em;
+    text-align: right;
+  }
 
   &__logo {
-    width: 100%;
+    fill:currentColor;
+    fill-rule:evenodd;
+    width: 75%;
 
     @include tablet-and-up() {
       width: 500px;
@@ -20,7 +27,12 @@
 
   &__subheading {
     font-family: Georgia, serif;
+    font-size: 1em;
     font-weight: 300;
     margin: 0;
+
+    @include tablet-and-up() {
+      font-size: 2em;
+    }
   }
 }

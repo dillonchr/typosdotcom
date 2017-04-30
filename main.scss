@@ -1,10 +1,8 @@
 @mixin tablet-and-up() {
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     @content;
   }
 }
-
-$main-color: deeppink;
 
 body {
   box-sizing: border-box;
@@ -12,14 +10,12 @@ body {
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
   font-feature-settings: "onum";
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
-  padding: 1em;
   width: 100%;
 
   @include tablet-and-up() {
     font-size: 18px;
-    padding: 0;
   }
 }
 
