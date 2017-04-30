@@ -1,0 +1,38 @@
+.header {
+  background: deeppink;
+  color: white;
+  padding: 7em 1em 1em;
+  text-align: center;
+
+  @include tablet-and-up() {
+    padding-top: 9em;
+    text-align: right;
+  }
+
+  &__logo {
+    fill:currentColor;
+    fill-rule:evenodd;
+    width: 75%;
+
+    @include tablet-and-up() {
+      width: 500px;
+    }
+  }
+
+  &__logo-text {
+    font-family: sans-serif;
+    font-size: 6em;
+    margin: 0;
+  }
+
+  &__subheading {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+
+    @include tablet-and-up() {
+      font-size: 2em;
+    }
+  }
+}

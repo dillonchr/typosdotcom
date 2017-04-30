@@ -1,0 +1,47 @@
+@mixin tablet-and-up() {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum";
+  font-size: 16px;
+  margin: 0;
+  width: 100%;
+
+  @include tablet-and-up() {
+    font-size: 18px;
+  }
+}
+
+abbr {
+  font-variant-caps: small-caps;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
+}
+
+
+a {
+  text-decoration: none;
+  border-bottom: solid currentColor 1px;
+
+  &:link,
+  &:visited {
+    color: deeppink;
+  }
+
+  &:hover {
+    color: darken(deeppink, 25%);
+  }
+}
+
+@import "header";
+@import "footer";
+@import "detail";
+@import "cta";
