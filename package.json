@@ -7,6 +7,7 @@
     "build": "node-sass --output-style compressed main.scss main.css",
     "sass": "node-sass -w main.scss main.css",
     "serve": "browser-sync start --server ./ --files *.html,*.css",
+    "start": "start npm run sass & npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

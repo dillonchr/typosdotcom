@@ -1,26 +1,46 @@
-.submit-button {
+.cta {
+  $b: &;
   text-align: center;
 
   &__link {
     background: white;
-    border: solid 0.1em deeppink;
+    border: solid 0.1em currentColor;
     border-radius: 5px;
     color: deeppink;
     display: inline-block;
     font-family: sans-serif;
     font-size: 1.5em;
+    font-weight: 700;
     padding: 1em 0.5em;
 
     &:hover {
       background: deeppink;
       color: white;
-      border-color: white;
     }
 
     &:active {
       background: darken(deeppink, 25%);
       color: white;
-      border-color: white;
+    }
+  }
+
+  &--header {
+    margin: 2em 0;
+    order: 1;
+
+    #{$b}__link {
+      background: deeppink;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: deeppink;
+      }
+
+      &:active {
+        background: white;
+        color: darken(deeppink, 25%);
+      }
     }
   }
 }
