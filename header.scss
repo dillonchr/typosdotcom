@@ -1,6 +1,6 @@
+@import "variables";
+
 .header {
-  background: deeppink;
-  color: white;
   padding: 3em 1em 1em;
   text-align: center;
 
@@ -12,10 +12,9 @@
   }
 
   &__logo {
-    align-self: flex-end;
-    fill:currentColor;
-    fill-rule:evenodd;
-    order: 2;
+    align-self: center;
+    fill: $newsprint;
+    fill-rule: evenodd;
     width: 75%;
 
     @include tablet-and-up() {
@@ -28,7 +27,7 @@
     font-size: 1em;
     font-weight: 300;
     margin: 0;
-    order: 3;
+    text-align: center;
 
     @include tablet-and-up() {
       font-size: 2em;

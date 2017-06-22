@@ -1,20 +1,19 @@
 .detail {
-  margin: 50px 1em;
+  margin: 5em 1em;
 
   @include tablet-and-up() {
-    margin: 50px auto;
+    margin: 7em auto;
     width: 700px;
   }
 
   &__header {
-    color: deeppink;
     font-family: sans-serif;
     font-size: 2em;
   }
 
   &__subheader {
-    color: deeppink;
-    border-bottom: solid 1px deeppink;
+    color: $newsprint;
+    border-bottom: solid 1px $newsprint;
     font-family: sans-serif;
   }
 
