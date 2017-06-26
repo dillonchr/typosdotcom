@@ -1,4 +1,7 @@
+@import "variables.scss";
+
 .detail {
+  height: 100vh;
   margin: 5em 1em;
 
   @include tablet-and-up() {

@@ -1,0 +1,32 @@
+.cta {
+  text-align: center;
+}
+
+.header .cta {
+  margin: 2em 0;
+}
+
+.cta .link {
+  background: #3A8CD4;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 1em 0.5em;
+  text-decoration: none;
+}
+
+.cta .link:link,
+.cta .link:visited {
+  color: #FCF6E6;
+}
+
+.cta .link:hover {
+  background: darken(#3A8CD4, 15%);
+}
+
+.cta .link:active {
+  background: #FDDC68;
+  color: #252737;
+}
