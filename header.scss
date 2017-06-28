@@ -1,14 +1,17 @@
 @import "variables";
 
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5em 1em;
   padding: 3em 1em 1em;
   text-align: center;
 
   @include tablet-and-up() {
-    display: flex;
-    flex-direction: column;
-    padding-top: 9em;
-    text-align: right;
+    margin: auto;
+    width: 700px;
   }
 
   &__logo {
@@ -23,14 +26,22 @@
   }
 
   &__subheading {
+    border-bottom: solid 1px $newsprint;
     font-family: Georgia, serif;
     font-size: 1em;
     font-weight: 300;
-    margin: 0;
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
     text-align: center;
 
     @include tablet-and-up() {
       font-size: 2em;
     }
+  }
+
+  &__blurb {
+    font-family: Georgia, serif;
+    line-height: 1.4;
+    text-align: left;
   }
 }

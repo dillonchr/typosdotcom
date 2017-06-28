@@ -1,12 +1,22 @@
 @import "variables.scss";
 
 .detail {
-  height: 100vh;
-  margin: 5em 1em;
+  display: flex;
+  margin: auto;
+  width: 90%;
+
+  &__col {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    padding: 1em;
+
+    &--centered {
+      align-self: center;
+      flex-shrink: 0;
+    }
+  }
 
   @include tablet-and-up() {
-    margin: 7em auto;
-    width: 700px;
   }
 
   &__header {
@@ -23,6 +33,7 @@
   &__body {
     font-family: Georgia, serif;
     line-height: 1.4;
+    text-align: left;
   }
 
   &__body:first-of-type {
