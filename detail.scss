@@ -1,14 +1,39 @@
 @import "variables.scss";
 
 .detail {
-  display: flex;
-  margin: 3em auto;
-  width: 90%;
+  $b: &;
+
+  @media (min-width: 1080px) {
+    &--flipped-desktop {
+      #{$b}__col:first-child {
+        order: 3;
+      } 
+    }
+  }
 
   &__col {
     box-sizing: border-box;
-    width: 33%;
     padding: 1em;
+
+    @include tablet-and-up() {
+      width: 50%;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1080px) {
+      width: 33%;
+
+      &:first-child {
+        width: 33%;
+      }
+    }
+
+    &:first-child {
+      text-align: center;
+    }
 
     &--centered {
       align-self: center;
@@ -17,10 +42,19 @@
   }
 
   @include tablet-and-up() {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    width: 90%;
   }
 
   &__image {
-    width: 100%;
+    max-height: 50vh;
+    max-width: 80vw;
+
+    @media (min-width: 1080px) {
+      max-width: 100%;
+    }
   }
 
   &__header {

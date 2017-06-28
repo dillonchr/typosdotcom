@@ -4,6 +4,13 @@
   $b: &;
   text-align: center;
 
+  &--small {
+    #{$b}__link {
+      font-size: 1em;
+      padding: 0.5em;
+    }
+  }
+
   &__link {
     background: $blue;
     border-radius: 5px;
