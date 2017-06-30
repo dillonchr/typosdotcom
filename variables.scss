@@ -1,0 +1,12 @@
+$accent-color: tomato;
+$newsprint: #252737;//#2f2f2f;
+$newspaper: #FCF6E6;
+$blue: #3A8CD4;
+$red: #F33549;
+$yellow: #FDDC68;
+
+@mixin tablet-and-up() {
+  @media (min-width: 769px) {
+    @content;
+  }
+}

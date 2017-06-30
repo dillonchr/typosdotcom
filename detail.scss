@@ -1,26 +1,77 @@
+@import "variables.scss";
+
 .detail {
-  margin: 50px 1em;
+  $b: &;
+
+  @media (min-width: 1080px) {
+    &--flipped-desktop {
+      #{$b}__col:first-child {
+        order: 3;
+      } 
+    }
+  }
+
+  &__col {
+    box-sizing: border-box;
+    padding: 1em;
+
+    @include tablet-and-up() {
+      width: 50%;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1080px) {
+      width: 33%;
+
+      &:first-child {
+        width: 33%;
+      }
+    }
+
+    &:first-child {
+      text-align: center;
+    }
+
+    &--centered {
+      align-self: center;
+      flex-shrink: 0;
+    }
+  }
 
   @include tablet-and-up() {
-    margin: 50px auto;
-    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em auto;
+    width: 90%;
+  }
+
+  &__image {
+    max-height: 50vh;
+    max-width: 80vw;
+
+    @media (min-width: 1080px) {
+      max-width: 100%;
+    }
   }
 
   &__header {
-    color: deeppink;
     font-family: sans-serif;
     font-size: 2em;
   }
 
   &__subheader {
-    color: deeppink;
-    border-bottom: solid 1px deeppink;
+    color: $newsprint;
+    border-bottom: solid 1px $newsprint;
     font-family: sans-serif;
   }
 
   &__body {
     font-family: Georgia, serif;
     line-height: 1.4;
+    text-align: left;
   }
 
   &__body:first-of-type {

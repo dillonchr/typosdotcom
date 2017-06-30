@@ -1,46 +1,44 @@
+@import "variables";
+
 .cta {
   $b: &;
   text-align: center;
 
+  &--small {
+    #{$b}__link {
+      font-size: 1em;
+      padding: 0.5em;
+    }
+  }
+
   &__link {
-    background: white;
-    border: solid 0.1em currentColor;
+    background: $blue;
     border-radius: 5px;
-    color: deeppink;
     display: inline-block;
     font-family: sans-serif;
     font-size: 1.5em;
     font-weight: 700;
     padding: 1em 0.5em;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $newspaper;
+    }
 
     &:hover {
-      background: deeppink;
-      color: white;
+      background: darken($blue, 15%);
+
     }
 
     &:active {
-      background: darken(deeppink, 25%);
-      color: white;
+      background: $yellow;
+      color: $newsprint;
+
     }
   }
 
   &--header {
     margin: 2em 0;
-    order: 1;
-
-    #{$b}__link {
-      background: deeppink;
-      color: white;
-
-      &:hover {
-        background: white;
-        color: deeppink;
-      }
-
-      &:active {
-        background: white;
-        color: darken(deeppink, 25%);
-      }
-    }
   }
 }

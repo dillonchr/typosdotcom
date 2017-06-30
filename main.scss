@@ -1,11 +1,10 @@
-@mixin tablet-and-up() {
-  @media (min-width: 769px) {
-    @content;
-  }
-}
+@import "variables";
 
 body {
+  background: $newspaper;
   box-sizing: border-box;
+  color: $newsprint;
+  font-family: Georgia, serif;
   font-variant-numeric: oldstyle-nums;
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
@@ -28,16 +27,13 @@ abbr {
 
 
 a {
-  text-decoration: none;
-  border-bottom: solid currentColor 1px;
-
   &:link,
   &:visited {
-    color: deeppink;
+    color: $blue;
   }
 
   &:hover {
-    color: darken(deeppink, 25%);
+    color: $red;
   }
 }
 
